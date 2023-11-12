@@ -1,19 +1,21 @@
-import { getUserInput, displayResult } from "./calculatorUI";
-import { addNumbers, subtractNumbers, multiplyNumbers, divideNumbers } from "./calculator";
+import { getUserInput, displayResult } from './calculatorUI';
+import { addNumbers, subtractNumbers, multiplyNumbers, divideNumbers } from './calculator';
+
 const userInput = getUserInput();
+
 switch (userInput.operation) {
-  case "add":
+  case 'add':
     displayResult(addNumbers(userInput));
     break;
-  case "subtract":
+  case 'subtract':
     displayResult(subtractNumbers(userInput));
     break;
-  case "multiply":
+  case 'multiply':
     displayResult(multiplyNumbers(userInput));
     break;
-  case "divide":
+  case 'divide':
     displayResult(divideNumbers(userInput));
     break;
   default:
-    console.error("Invalid operation. Please enter add, subtract, multiply, or divide.");
+    console.error('Invalid operation. Please enter add, subtract, multiply, or divide.');
 }
